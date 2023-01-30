@@ -1,0 +1,62 @@
+@import "../../assets/scss/base/mixins";
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/fonts";
+@import "../../assets/scss/base/typography";
+
+.main-header {
+  @include d-flex(space-around, center);
+  font-size: $font-size-14;
+  @include space(2rem 0, 0);
+  .logo {
+    @include d-flex(space-between, center);
+    @include measure(20rem, 3.2rem);
+    @include space(0 1.5rem 0 0, 0);
+    img {
+      @include measure(4rem,4rem);
+      border-radius: 0.5rem;
+    }
+    .logo-content{
+      h3 {
+        font-size: $font-size-20;
+        letter-spacing: 0.3rem;
+        color: $list;
+        font-weight: $font-weight-medium;
+        margin: 0;
+        .logo-head {
+          color: $logo;
+        }
+      }
+      p {
+        font-size: $font-size-6;
+        letter-spacing: 0.08rem;
+        color: $logo;
+        margin: 0;
+      }
+    }
+  }
+  .contents {
+    @include d-flex(space-evenly, center);
+    font-weight: $font-weight-medium;
+    font-size: $font-size-13;
+    letter-spacing: 0.1rem;
+    .lists {
+      list-style: none;
+      color: $list;
+      @include space(0 2rem 0, 0);
+      .actns,.catgs{
+      outline: none;
+      border: none;
+      }
+      a,select{
+        text-decoration: none;
+        color: $list;
+      }
+    }
+    .ac{
+      display: flex;
+    }
+
+  }
+}
+
+

@@ -1,0 +1,111 @@
+@import "../../assets/scss/base/mixins";
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/fonts";
+@import "../../assets/scss/base/typography";
+
+.main {
+  .landing {
+    background-color: $getstarted;
+    width: 100%;
+    height: 33vw;
+    @include d-flex(center, center);
+    .get-start {
+      @include flex-fd-column;
+      align-items: center;
+      gap: 1.5rem;
+      .landing-head {
+        font-size: $font-size-45;
+        color: $white;
+        margin: 0;
+      }
+      .landing-content {
+        font-size: $font-size-14;
+        color: $white;
+      }
+      .started {
+        background-color: $white;
+        @include space(1.5rem 4rem, 0);
+        @include border-none;
+        border-radius: 8rem;
+        font-size: $font-size-16;
+      }
+    }
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  .type {
+    background-color: $black;
+    border-radius: 1rem;
+    .prop-type {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      padding: 0.5rem 5rem 0.7rem;
+      .listing {
+        border-right: 0.1rem solid white;
+        a {
+          text-decoration: none;
+          padding: 1rem 3rem;
+          font-size: $font-size-14;
+          color: white;
+        }
+      }
+      .bdr {
+        border: none;
+      }
+    }
+  }
+
+  .search-prop {
+    background-color: chartreuse;
+    @include measure(89rem,null);
+    border-radius: 7rem;
+    position: absolute;
+    .search-section {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    li {
+      list-style-type: none;
+    }
+    .choose{
+      padding-right: 3rem;
+      border-right:0.1rem solid black;
+      select{
+        border: none;
+        outline: none;
+        font-size: $font-size-14;
+      }
+    }
+    .search-input {
+      .search {
+        input {
+          @include measure(45rem, 5rem);
+          @include space(0 1rem 0 3rem, 0);
+          @include border(0.1rem solid transparent, 0);
+          outline: none;
+          transition: 0.3s ease;
+        }
+        input::placeholder {
+          font-size: $font-size-14;
+          font-weight: $font-weight-regular;
+        }
+      }
+    }
+    .search-btn{
+      .search{
+        border: 1px solid #E05206;
+        border-radius: 3.2rem;
+        padding:2rem 5rem;
+        font-size: $font-size-18;
+      }
+    }
+  }
+}
