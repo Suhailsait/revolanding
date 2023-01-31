@@ -6,9 +6,10 @@
 .main {
   .landing {
     background-color: $getstarted;
-    width: 100%;
     height: 33vw;
     @include d-flex(center, center);
+    flex-direction: column;
+    position: relative;
     .get-start {
       @include flex-fd-column;
       align-items: center;
@@ -30,81 +31,114 @@
         font-size: $font-size-16;
       }
     }
+    .bottom {
+      @include d-flex(center, center);
+      flex-direction: column;
+      position: absolute;
+      bottom: -3rem;
+      .type {
+        background-color: $black;
+        border-radius: 1rem 1rem 0.4rem 0.4rem;
+        .prop-type {
+          display: flex;
+          list-style-type: none;
+          padding: 0.2rem 5rem 0.5rem;
+          .listing {
+            border-right: 0.1rem solid $white;
+            a {
+              text-decoration: none;
+              padding: 1rem 3rem;
+              font-size: $font-size-14;
+              color: $white;
+            }
+          }
+          .bdr {
+            border: none;
+          }
+        }
+      }
+      .search-prop {
+        background-color: $white;
+        @include measure(89rem, null);
+        border-radius: 7rem;
+        color: $list;
+        box-shadow: 0.6rem 0.9rem 1.9rem $shadow;
+        .search-section {
+          @include d-flex(space-evenly, center);
+        }
+        li {
+          list-style-type: none;
+        }
+        .locate{
+          cursor: pointer;
+        }
+        .choose {
+          padding-right: 3rem;
+          border-right: 0.1rem solid $searchbrdr;
+          height: 3rem;
+          @include flex-v-center;
+          select {
+            border: none;
+            outline: none;
+            font-size: $font-size-14;
+            color: $list;
+            padding-right: 1rem;
+          }
+        }
+        .search-input {
+          .search {
+            input {
+              @include measure(45rem, 5rem);
+              @include space(0 1rem 0 3rem, 0);
+              border: none;
+              outline: none;
+              transition: 0.3s ease;
+            }
+            input::placeholder {
+              font-size: $font-size-14;
+              font-weight: $font-weight-regular;
+            }
+          }
+        }
+        .search-btn {
+          .search {
+            border: 1px solid $logo;
+            border-radius: 3.2rem;
+            padding: 1.7rem 5rem;
+            font-size: $font-size-18;
+            color: $logo;
+            background-color: $white;
+          }
+        }
+      }
+    }
   }
-}
+  .recent {
+    @include d-flex-h-center(center);
+    padding: 4rem 2rem 0;
+    background-color: #f8f9fb;
 
-.bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  .type {
-    background-color: $black;
-    border-radius: 1rem;
-    .prop-type {
-      display: flex;
-      flex-direction: row;
+    .recent-lists {
+      @include flex-v-center;
       list-style-type: none;
-      padding: 0.5rem 5rem 0.7rem;
-      .listing {
-        border-right: 0.1rem solid white;
-        a {
-          text-decoration: none;
-          padding: 1rem 3rem;
-          font-size: $font-size-14;
-          color: white;
+      color: $list;
+      .popular {
+        @include flex-v-center;
+        @include space(0,0 2rem 0 0);
+        font-size: $font-size-13;
+        gap: 1rem;
+        span{
+          font-size: $font-size-19;
         }
       }
-      .bdr {
-        border: none;
-      }
-    }
-  }
-
-  .search-prop {
-    background-color: chartreuse;
-    @include measure(89rem,null);
-    border-radius: 7rem;
-    position: absolute;
-    .search-section {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    }
-    li {
-      list-style-type: none;
-    }
-    .choose{
-      padding-right: 3rem;
-      border-right:0.1rem solid black;
-      select{
-        border: none;
-        outline: none;
-        font-size: $font-size-14;
-      }
-    }
-    .search-input {
-      .search {
-        input {
-          @include measure(45rem, 5rem);
-          @include space(0 1rem 0 3rem, 0);
-          @include border(0.1rem solid transparent, 0);
-          outline: none;
-          transition: 0.3s ease;
+      .searches{
+        font-size: $font-size-12;
+        button{
+          @include space(0.8rem 1.5rem,0 1rem);
+          color: $list;
+          border-radius: 5rem;
+          border: none;
         }
-        input::placeholder {
-          font-size: $font-size-14;
-          font-weight: $font-weight-regular;
-        }
-      }
-    }
-    .search-btn{
-      .search{
-        border: 1px solid #E05206;
-        border-radius: 3.2rem;
-        padding:2rem 5rem;
-        font-size: $font-size-18;
       }
     }
   }

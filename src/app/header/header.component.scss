@@ -46,10 +46,14 @@
       .actns,.catgs{
       outline: none;
       border: none;
+      background: transparent;
       }
       a,select{
         text-decoration: none;
         color: $list;
+      }
+      select{
+        padding-right: 0.7rem;
       }
     }
     .ac{
