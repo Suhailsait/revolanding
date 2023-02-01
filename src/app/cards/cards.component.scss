@@ -4,78 +4,68 @@
 @import "../../assets/scss/base/typography";
 
 .cards-main {
-  background-color: #f8f9fb;
+  background-color: $cardsbg;
   .categories {
-    padding: 7rem 5rem;
+    @include space(7rem 5rem,0);
     .cards {
-      display: flex;
-      justify-content: center;
+      @include d-flex-h-center(center);
       gap: 4rem;
       .card {
-        display: flex;
-        flex-direction: column;
+        @include flex-fd-column;
         align-items: center;
         .icon {
           box-shadow: 0px 3px 16px #00000029;
-          border-radius: 9px;
-          border: 1px solid #f1f1f1;
-          padding: 42px 26px;
+          @include border(0.1rem solid $cardbrdr, 0.9rem);
+          @include space(4.2rem 2.6rem, null);
           .circle {
-            background-color: #5d47dc26;
-            padding: 16px 22px;
+            background-color: $circle;
+            @include space(1.6rem 2.2rem,0);
             border-radius: 50%;
             position: relative;
             .circle-1 {
               position: absolute;
-              background-color: #5d47dc26;
-              padding: 12px 12px;
+              background-color: $circle;
+              @include space(1.2rem 1.2rem,0);
               border-radius: 50%;
-              top: -0.5rem;
-              right: -0.5rem;
+              @include position(-0.5rem, -0.5rem, null, null);
             }
             .circle-2 {
               position: absolute;
-              background-color: #5d47dc26;
-              padding: 6px 6px;
+              background-color: $circle;
+              @include space(0.6rem 0.6rem,0);
               border-radius: 50%;
-              bottom: 0;
-              left: 0;
+              @include position(null, null, 0, 0);
             }
           }
         }
         .typeof {
-          width: 80px;
+          @include measure(8rem, 0);
           text-align: center;
           p {
             font-size: $font-size-13;
-            color: #000000ca;
+            color: $text1;
           }
         }
       }
     }
   }
-
+  
   .dealing {
-    margin-bottom: 10rem;
+    @include space(5rem 0 10rem 0,0);
     .cards {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include d-flex(center,center);
         gap: 2rem;
       .card {
         background-color: $white;
         box-shadow: 0px 3px 16px #00000029;
-        border: 1px solid #f1f1f1;
-        border-radius: 9px;
-        display: flex;
-        gap: 1rem;
-        flex-direction: column;
+        @include border(0.1rem solid $cardbrdr,0.9rem);
+        @include flex-fd-column;
         align-items: center;
-        padding: 45px 15px;
-        width: 340px;
+        gap: 1rem;
+        @include space(4.5rem 1.5rem,0);
+        width: 34rem;
         img {
-          width: 192px;
-          height: 118px;
+          @include measure(19.2rem,11.8rem);
         }
         h1{
             font-size: $font-size-18;
@@ -83,18 +73,19 @@
         p{
             font-size: $font-size-13;
             text-align: center;
-            width:310px;
+            width:31rem;
             line-height: 3rem;
             color: #7C828A;
         }
         button{
             color: $logo;
-            border: 1px solid $logo;
-            border-radius: 3.2rem;
-            padding: 1.3rem 1.7rem;
-            font-size: $font-size-16;
+            @include border(0.1rem solid $logo,3.2rem);
+            @include space(1.5rem 2.4rem,0);
+            font-size: $font-size-14;
+            font-weight: $font-weight-bold;
             color: $logo;
             background-color: $white;
+            letter-spacing: 0.08rem;
         }
       }
     }

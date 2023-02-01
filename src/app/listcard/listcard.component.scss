@@ -1,0 +1,126 @@
+@import "../../assets/scss/base/mixins";
+@import "../../assets/scss/base/colors";
+@import "../../assets/scss/base/fonts";
+@import "../../assets/scss/base/typography";
+
+.listings {
+  .properties {
+    background-color: #00a6b516;
+    height: 60rem;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5rem;
+      .prop-head {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h1 {
+          font-size: $font-size-22;
+        }
+        p {
+          font-size: $font-size-18;
+          color: $list;
+        }
+      }
+      .lists {
+        .cards {
+          @include d-flex(center, center);
+          gap: 3rem;
+          .card {
+            position: relative;
+            .type {
+              background-color: $typeclr;
+              @include measure(4.5rem, 2.3rem);
+              border-radius: 0 0 0.6rem 0;
+              position: absolute;
+              bottom: 22rem;
+              @include d-flex(center, center);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              p {
+                font-size: $font-size-12;
+                color: $white;
+                font-weight: $font-weight-regular;
+              }
+            }
+            .image {
+              img {
+                border-radius: 0.5rem;
+                width: 36.5rem;
+                height: 27rem;
+              }
+            }
+            .card-content {
+              position: absolute;
+              bottom: -10.5rem;
+              right: 0;
+              width: 300px;
+              height: 130px;
+              padding-left: 2.5rem;
+              padding-top: 4rem;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              border-radius: 15px 0px 0px 15px;
+              box-shadow: -8px -6px 19px #00000029;
+              background-color: $white;
+              h1 {
+                font-size: $font-size-16;
+              }
+              p {
+                font-size: $font-size-14;
+              }
+              h2 {
+                font-size: $font-size-18;
+              }
+            }
+            .card-icon {
+              position: absolute;
+              bottom: 3rem;
+              right: 22rem;
+              width: 79px;
+              height: 79px;
+              box-shadow: 0px 3px 20px 0 rgb(0, 0, 0, 0.159);
+              border-radius: 50%;
+              background-color: $white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .material-icons-round {
+                font-size: $font-size-35;
+                color: rgba(9, 9, 93, 0.79);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .builders {
+    background-color: $buildclr;
+    height: 40rem;
+    .container {
+      .companies {
+        .cards {
+          .card {
+            box-shadow: 4px 3px 16px #2828281c;
+            border-radius: 12px;
+            background-color: $white;
+            .image {
+              img {
+                width: 198px;
+                height: 132px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

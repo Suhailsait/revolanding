@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingComponent } from './landing/landing.component';
 import { CardsComponent } from './cards/cards.component';
+import { ListcardComponent } from './listcard/listcard.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { CardsComponent } from './cards/cards.component';
     AppComponent,
     HeaderComponent,
    LandingComponent,
-   CardsComponent
+   CardsComponent,
+   ListcardComponent
   ],
   imports: [
     BrowserModule,
