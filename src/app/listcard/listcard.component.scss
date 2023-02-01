@@ -14,7 +14,7 @@
       justify-content: center;
       padding-top: 5rem;
       .prop-head {
-        width: 85%;
+        width: 115rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -81,7 +81,7 @@
             }
             .card-icon {
               position: absolute;
-              bottom: 3rem;
+              bottom: 3.5rem;
               right: 22rem;
               width: 79px;
               height: 79px;
@@ -104,18 +104,71 @@
 
   .builders {
     background-color: $buildclr;
-    height: 40rem;
     .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      height: 50rem;
+      .builder-head {
+        display: flex;
+        align-items: flex-start;
+        width:120rem;
+        h1{
+          font-size: $font-size-23;
+          color: #000000ab;
+        }
+      }
       .companies {
         .cards {
+          display: flex;
+          justify-content: center;
+          gap: 3rem;
           .card {
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
             box-shadow: 4px 3px 16px #2828281c;
             border-radius: 12px;
-            background-color: $white;
+            width: 220px;
+            height: 250px;
+            position: relative;
             .image {
+              width: 13rem;
+              height: 11rem;
               img {
-                width: 198px;
-                height: 132px;
+                width: 13rem;
+                height: 11rem;
+              }
+            }
+            .card-content {
+              text-align: center;
+              h2 {
+                font-size: $font-size-16;
+              }
+              p {
+                font-size: $font-size-14;
+                color: rgba(0, 0, 0, 0.458);
+              }
+            }
+            .icon-more {
+              position: absolute;
+              bottom:-2.5rem;
+              box-shadow: 0px 3px 9px #00000021;
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: #00A5B5;
+              color: $white;
+              span{
+
+                font-size: $font-size-28;
               }
             }
           }
