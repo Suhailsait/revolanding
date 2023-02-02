@@ -16,12 +16,18 @@
         .icon {
           box-shadow: 0px 3px 16px #00000029;
           @include border(0.1rem solid $cardbrdr, 0.9rem);
-          @include space(4.2rem 2.6rem, null);
+          @include space(2.8rem 2rem, null);
+          display: flex;
+          justify-content: center;
+          align-items: center;
           .circle {
             background-color: $circle;
-            @include space(1.6rem 2.2rem,0);
+            @include space(0.6rem 1.2rem,0);
             border-radius: 50%;
             position: relative;
+            .material-icons-round{
+              color:#5d47dc7b;
+            }
             .circle-1 {
               position: absolute;
               background-color: $circle;
