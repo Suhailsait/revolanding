@@ -6,7 +6,7 @@
 .listings {
   .properties {
     background-color: #00a6b516;
-    height: 60rem;
+    // height: 60rem;
     .container {
       @include d-flex(center, center);
       flex-direction: column;
@@ -26,15 +26,18 @@
       .lists {
         .cards {
           @include d-flex(center, center);
+          flex-wrap: wrap;
           gap: 3rem;
           .card {
+            @include measure(36.5rem, 38rem);
+            border-radius: 0.5rem;
             position: relative;
             .type {
               background-color: $typeclr;
               @include measure(4.5rem, 2.3rem);
               border-radius: 0 0 0.6rem 0;
               position: absolute;
-              bottom: 22rem;
+              bottom: 33rem;
               @include d-flex(center, center);
               p {
                 font-size: $font-size-12;
@@ -50,7 +53,7 @@
             }
             .card-content {
               position: absolute;
-              bottom: -10.5rem;
+              bottom:0rem;
               right: 0;
               @include measure(30rem, 13rem);
               padding-left: 2.5rem;
@@ -72,7 +75,7 @@
             }
             .card-icon {
               position: absolute;
-              bottom: 3.5rem;
+              bottom:14rem;
               right: 22rem;
               @include measure(7.9rem, 7.9rem);
               box-shadow: 0px 3px 20px 0 rgb(0, 0, 0, 0.159);
@@ -109,6 +112,7 @@
       .companies {
         .cards {
           @include d-flex-h-center(center);
+          flex-wrap: wrap;
           gap: 3rem;
           .card {
             background-color: $white;

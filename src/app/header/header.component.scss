@@ -2,25 +2,32 @@
 @import "../../assets/scss/base/colors";
 @import "../../assets/scss/base/fonts";
 @import "../../assets/scss/base/typography";
+@import "../../assets/scss/base/variables";
 
 .main-header {
-  @include d-flex(space-around, center);
+  @include d-flex(space-between, center);
   font-size: $font-size-14;
-  @include space(2rem 0, 0);
+  @include space(2.5rem 0, 0);
+  @media only #{$mobile-smMax}{
+    flex-direction: column;
+  }
   .logo {
-    @include d-flex(space-between, center);
-    @include measure(20rem, 3.2rem);
-    @include space(0 1.5rem 0 0, 0);
+    @include d-flex(flex-end, center);
+    flex-wrap: wrap;
+    @include measure(33rem, 3.2rem);
+    gap: 1.8rem;
     img {
-      @include measure(4rem, 4rem);
+      @include measure(4.5rem, 4.5rem);
       border-radius: 0.5rem;
     }
     .logo-content {
-      h3 {
+      @include flex-fd-column;
+      gap: 0.6rem;
+      h6 {
         font-size: $font-size-20;
-        letter-spacing: 0.3rem;
+        word-spacing: 0.1rem;
         color: $list;
-        font-weight: $font-weight-medium;
+        font-weight: $font-weight-bold;
         margin: 0;
         .logo-head {
           color: $logo;
@@ -28,21 +35,41 @@
       }
       p {
         font-size: $font-size-6;
-        letter-spacing: 0.08rem;
+        letter-spacing: 0.03rem;
         color: $logo;
         margin: 0;
       }
     }
   }
+  .heading-2{
+    width:98rem;
+    @media only #{$mobile-smMax}{
+      width:100%;
+
+    }
   .contents {
-    @include d-flex(space-evenly, center);
+    @include d-flex(center, center);
+    flex-wrap: wrap;
     font-weight: $font-weight-medium;
     font-size: $font-size-13;
     letter-spacing: 0.1rem;
+    gap:4.8rem;
+ 
+    @media only #{$mobile-smMax}{
+      width:100%;
+      flex-direction: column;
+      justify-content: center;
+    }
     .lists {
       list-style: none;
       color: $list;
-      @include space(0 2rem 0, 0);
+      .list-free{
+        padding: 0.3rem 0.7rem;
+        background-color: $headfree;
+        font-size: $font-size-7;
+        border-radius:0.2rem;
+        letter-spacing: 0.05rem;
+      }
       .actns,
       .catgs {
         outline: none;
@@ -60,6 +87,12 @@
     }
     .ac {
       display: flex;
+      justify-content: center;
+      gap:1rem;
+      i{
+        font-size: $font-size-20;
+      }
     }
   }
+}
 }

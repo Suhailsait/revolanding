@@ -6,7 +6,7 @@
 .main {
   .landing {
     background-color: $getstarted;
-    height: 33vw;
+    height: 66vh;
     @include d-flex(center, center);
     flex-direction: column;
     position: relative;
@@ -15,7 +15,7 @@
       align-items: center;
       gap: 1.5rem;
       .landing-head {
-        font-size: $font-size-45;
+        font-size: $font-size-35;
         color: $white;
         margin: 0;
       }

@@ -9,6 +9,7 @@
     @include space(7rem 5rem,0);
     .cards {
       @include d-flex-h-center(center);
+      flex-wrap: wrap;
       gap: 4rem;
       .card {
         @include flex-fd-column;
@@ -58,6 +59,7 @@
     @include space(5rem 0 10rem 0,0);
     .cards {
         @include d-flex(center,center);
+        flex-wrap: wrap;
         gap: 2rem;
       .card {
         background-color: $white;
@@ -79,7 +81,7 @@
             text-align: center;
             width:31rem;
             line-height: 3rem;
-            color: #7C828A;
+            color: $gray-1;
         }
         button{
             color: $logo;

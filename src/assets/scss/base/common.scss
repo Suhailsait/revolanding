@@ -4,3 +4,13 @@
 @import "../base/typography";
 @import "../base/fonts";
 
+.d-flex{
+    display: flex;
+}
+.align-item{
+    align-items: center;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
