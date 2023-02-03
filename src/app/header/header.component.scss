@@ -12,10 +12,10 @@
     @include measure(20rem, 3.2rem);
     @include space(0 1.5rem 0 0, 0);
     img {
-      @include measure(4rem,4rem);
+      @include measure(4rem, 4rem);
       border-radius: 0.5rem;
     }
-    .logo-content{
+    .logo-content {
       h3 {
         font-size: $font-size-20;
         letter-spacing: 0.3rem;
@@ -43,24 +43,23 @@
       list-style: none;
       color: $list;
       @include space(0 2rem 0, 0);
-      .actns,.catgs{
-      outline: none;
-      border: none;
-      background: transparent;
+      .actns,
+      .catgs {
+        outline: none;
+        border: none;
+        background: transparent;
       }
-      a,select{
+      a,
+      select {
         text-decoration: none;
         color: $list;
       }
-      select{
+      select {
         padding-right: 0.7rem;
       }
     }
-    .ac{
+    .ac {
       display: flex;
     }
-
   }
 }
-
-

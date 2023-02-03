@@ -8,12 +8,9 @@
     background-image: url(../../assets/images/Footer.jpg);
     height: 34rem;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include d-flex(center, center);
     .footer-contents {
-      display: flex;
-      flex-direction: column;
+      @include flex-fd-column;
       align-items: flex-start;
       width: 80%;
       gap: 2rem;
@@ -22,13 +19,12 @@
           font-size: $font-size-75;
           color: $white;
           span {
-            color: #262626;
+            color: $footerblack;
           }
         }
       }
       .content {
-        display: flex;
-        flex-direction: column;
+        @include flex-fd-column;
         align-items: center;
         width: 28.4rem;
         p {
@@ -43,29 +39,23 @@
 
           .iphone,
           .android {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            box-shadow: 3px 3px 8px #0000005e;
+            @include d-flex(space-evenly, center);
+            @include measure(13.2rem, 4.5rem);
+            box-shadow: 0.3rem 0.3rem 0.8rem #0000005e;
             border-radius: 5px;
-            width: 132px;
-            height: 45px;
             background-color: rgba(0, 0, 0, 0.778);
             cursor: pointer;
           }
-          .iphone i
-         {
+          .iphone i {
             font-size: $font-size-28;
             color: $white;
           }
-          .android img{
-            width: 2.5rem;
-            height: 2.5rem;
+          .android img {
+            @include measure(2.5rem, 2.5rem);
           }
           .iphone .icon-contents,
           .android .icon-contents {
-            display: flex;
-            flex-direction: column;
+            @include flex-fd-column;
             justify-content: space-evenly;
             gap: 0.5rem;
             color: $white;
@@ -87,15 +77,11 @@
   .footer-2 {
     background-color: #001b49;
 
-    .container{
-        padding:5rem 0 5rem 0;
-        .footer-contents{
-            display: flex;
-            justify-content: space-evenly;
+    .container {
+      padding: 5rem 0 5rem 0;
+      .footer-contents {
+        @include d-flex-h-center(space-evenly);
 
-
-   
- 
         ul {
           list-style-type: none;
           .list-head {
@@ -119,28 +105,26 @@
     }
   }
 
-  .footer-3{
-    .social{
-        display: flex;
-        justify-content: center;
-        gap: 3rem;
-        padding: 2rem 0 1rem 0;
-        span{
-            i{
-                font-size: $font-size-24;
-            }
+  .footer-3 {
+    .social {
+      @include d-flex-h-center(center);
+      gap: 3rem;
+      padding: 2rem 0 1rem 0;
+      span {
+        i {
+          font-size: $font-size-24;
         }
-    }   
-    .copywrite{
-        display: flex;
-        justify-content: center;
-        p{
-            font-size: $font-size-14;
-            padding-bottom: 5rem;
-            a{
-                color: black;
-            }
+      }
+    }
+    .copywrite {
+      @include d-flex-h-center(center);
+      p {
+        font-size: $font-size-14;
+        padding-bottom: 5rem;
+        a {
+          color: black;
         }
+      }
     }
   }
 }

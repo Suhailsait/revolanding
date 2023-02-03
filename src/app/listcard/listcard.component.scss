@@ -8,15 +8,12 @@
     background-color: #00a6b516;
     height: 60rem;
     .container {
-      display: flex;
+      @include d-flex(center, center);
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
       padding-top: 5rem;
       .prop-head {
         width: 115rem;
-        display: flex;
-        flex-direction: column;
+        @include flex-fd-column;
         align-items: flex-start;
         h1 {
           font-size: $font-size-22;
@@ -39,9 +36,6 @@
               position: absolute;
               bottom: 22rem;
               @include d-flex(center, center);
-              display: flex;
-              align-items: center;
-              justify-content: center;
               p {
                 font-size: $font-size-12;
                 color: $white;
@@ -51,20 +45,17 @@
             .image {
               img {
                 border-radius: 0.5rem;
-                width: 36.5rem;
-                height: 27rem;
+                @include measure(36.5rem, 27rem);
               }
             }
             .card-content {
               position: absolute;
               bottom: -10.5rem;
               right: 0;
-              width: 300px;
-              height: 130px;
+              @include measure(30rem, 13rem);
               padding-left: 2.5rem;
               padding-top: 4rem;
-              display: flex;
-              flex-direction: column;
+              @include flex-fd-column;
               align-items: flex-start;
               border-radius: 15px 0px 0px 15px;
               box-shadow: -8px -6px 19px #00000029;
@@ -83,14 +74,11 @@
               position: absolute;
               bottom: 3.5rem;
               right: 22rem;
-              width: 79px;
-              height: 79px;
+              @include measure(7.9rem, 7.9rem);
               box-shadow: 0px 3px 20px 0 rgb(0, 0, 0, 0.159);
               border-radius: 50%;
               background-color: $white;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+              @include d-flex(center, center);
               .material-icons-round {
                 font-size: $font-size-35;
                 color: rgba(9, 9, 93, 0.79);
@@ -105,43 +93,34 @@
   .builders {
     background-color: $buildclr;
     .container {
-      display: flex;
+      @include d-flex(center, center);
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       gap: 4rem;
       height: 50rem;
       .builder-head {
         display: flex;
         align-items: flex-start;
-        width:120rem;
-        h1{
+        width: 120rem;
+        h1 {
           font-size: $font-size-23;
           color: #000000ab;
         }
       }
       .companies {
         .cards {
-          display: flex;
-          justify-content: center;
+          @include d-flex-h-center(center);
           gap: 3rem;
           .card {
             background-color: $white;
-            display: flex;
+            @include d-flex(space-evenly, center);
             flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
             box-shadow: 4px 3px 16px #2828281c;
             border-radius: 12px;
-            width: 220px;
-            height: 250px;
+            @include measure(22rem, 25rem);
             position: relative;
             .image {
-              width: 13rem;
-              height: 11rem;
               img {
-                width: 13rem;
-                height: 11rem;
+                @include measure(13rem, 11rem);
               }
             }
             .card-content {
@@ -156,18 +135,14 @@
             }
             .icon-more {
               position: absolute;
-              bottom:-2.5rem;
+              bottom: -2.5rem;
               box-shadow: 0px 3px 9px #00000021;
-              width: 48px;
-              height: 48px;
+              @include measure(4.8rem, 4.8rem);
               border-radius: 50%;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              background-color: #00A5B5;
+              @include d-flex(center, center);
+              background-color: #00a5b5;
               color: $white;
-              span{
-
+              span {
                 font-size: $font-size-28;
               }
             }

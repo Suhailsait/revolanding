@@ -102,9 +102,8 @@
         }
         .search-btn {
           .search {
-            border: 1px solid $logo;
-            border-radius: 3.2rem;
-            padding: 1.7rem 5rem;
+            @include border(0.1rem solid $logo,3.2rem);
+            @include space(1.7rem 5rem,0);
             font-size: $font-size-18;
             color: $logo;
             background-color: $white;

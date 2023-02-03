@@ -14,19 +14,17 @@
         @include flex-fd-column;
         align-items: center;
         .icon {
-          box-shadow: 0px 3px 16px #00000029;
+          box-shadow: 0 0.3rem 1.6rem #00000029;
           @include border(0.1rem solid $cardbrdr, 0.9rem);
           @include space(2.8rem 2rem, null);
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include d-flex(center,center);
           .circle {
             background-color: $circle;
             @include space(0.6rem 1.2rem,0);
             border-radius: 50%;
             position: relative;
             .material-icons-round{
-              color:#5d47dc7b;
+              color:$circleicon;
             }
             .circle-1 {
               position: absolute;
@@ -63,7 +61,7 @@
         gap: 2rem;
       .card {
         background-color: $white;
-        box-shadow: 0px 3px 16px #00000029;
+        box-shadow: 0px 0.3rem 1.6rem #00000029;
         @include border(0.1rem solid $cardbrdr,0.9rem);
         @include flex-fd-column;
         align-items: center;
